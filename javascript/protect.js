@@ -1,4 +1,6 @@
-// file.js
-$(document).on('knack-scene-render.any', function(event, scene) {
-  alert('Page rendered!');
+$(document).ready(function(){
+  var user = Knack.getUserAttributes();
+		if (user.email == null){
+  		window.location.replace("/cs-course/login");
+}
 });
